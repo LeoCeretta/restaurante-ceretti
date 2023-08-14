@@ -1,0 +1,52 @@
+@import 'styles/variaveis';
+@import 'styles/breakpoints';
+
+.navbar {
+    background-color: #dddddd;
+    padding: 20px $padding-horizontal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: $desktop_xsm) {
+      padding: 20px $padding-horizontal-mobile;
+    }
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+      padding: 20px $padding-horizontal-sm;
+    }
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+      padding: 20px $padding-horizontal-md;
+    }
+    &__lista {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+    }
+    &__item {
+      font-size: 1.25rem;
+      text-decoration: none;
+      margin: 12px;
+    }
+    &__item:hover {
+      transition: 0.2s;
+      color: $dark;
+    }
+}
+
+.footer {
+  display: flex;
+  background-color: #dddddd;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px $padding-horizontal;
+  @media (max-width: $desktop_xsm) {
+    padding: 20px $padding-horizontal-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 20px $padding-horizontal-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 20px $padding-horizontal-md;
+  }
+}

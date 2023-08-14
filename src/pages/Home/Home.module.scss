@@ -1,0 +1,57 @@
+@import 'styles/variaveis';
+@import 'styles/breakpoints';
+
+.home {
+    align-items: center;
+    background-image: url("/assets/home/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 1080px;
+    padding: 0px $padding-horizontal;
+    @media (max-width: $desktop_xsm) {
+      padding: 0px $padding-horizontal-mobile;
+    }
+    @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+      padding: 0px $padding-horizontal-sm;
+    }
+    @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+      padding: 0px $padding-horizontal-md;
+    }
+    &__titulo {
+        color: white;
+        font-size: 5rem;
+        font-weight: bold;
+        min-width: 400px;
+        margin-top: 20%;
+    }
+    &__subtitulo {
+      color: white;
+      font-size: 2rem;
+  }
+}
+
+.botao {
+  align-items: center;
+  background-color: $red;
+  border: white;
+  border-radius: 25px;
+  display: flex;
+  font-size: 2rem;
+  margin-top: 70px;
+  height: 90px;
+  justify-content: center;
+  width: 560px;
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color: $dark;
+  }
+  &__texto {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+  }
+}
